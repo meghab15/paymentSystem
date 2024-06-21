@@ -1,14 +1,9 @@
 # paymentSystem
 A command-line payment application similar to paytm 
 
-Below Requirement was shared by Scaler Team in a master Class:
-
-I have implemented it. This Java code can act as reference for Java beginners. 
-
 **How to run the payment System**
-First Install java jdk (if not already present ) and mysql on your computer.
 
-MySQL Changes
+First Install java jdk (if not already present) and mysql on your computer.
 
 After installing mysql Open it
 Enter the command given below in Mysql
@@ -16,12 +11,19 @@ Run script.sql
 
 Download MySQL Connector/J for MySQL
 
-To run Find the path of mysql-connector-j jar path which is inside the above downloaded 
-javac -classpath {path}/mysql-connector-j-8.*.*.jar:. Main.java  
-java -classpath {path}/mysql-connector-j-8.*.*.jar:. Main
+To run, find the path of mysql-connector-j jar path which is downloaded above.  
+javac -classpath {jar path}:. Main.java  
+java -classpath {jar path}:. Main
 
+e.g:  javac -classpath ~/Downloads/mysql-connector-j-8.4.0/mysql-connector-j-8.4.0.jar:. Main.java 
+java -classpath ~/Downloads/mysql-connector-j-8.4.0/mysql-connector-j-8.4.0.jar:. Main
 
-**Requirements**: Create design (class diagram and schema design) and write working code 
+**Requirements**:
+
+Below Requirement was shared by Scaler Team in a master Class:
+This Java code can act as reference for Java beginners.  
+
+Create design (class diagram and schema design) and write working code 
 for a command-line payment application that supports the following use cases.
 
 Allow users to create accounts via their phone number and password.

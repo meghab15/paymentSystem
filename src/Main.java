@@ -13,22 +13,20 @@ public class Main {
         System.out.println("Hello, Welcome to payment World!");
 
         UserDao userDao= new UserDao();
-
-        String meghaPhoneNo = "7799814891";
-        String ganeshPhoneNo = "9555562494";
-
         UserManagementService userManagementService = new UserManagementService(userDao);
-//
-//        userManagementService.registerUser(ganeshPhoneNo, "mysecretkey");
-//
-//        User user2= userManagementService.getUserByPhoneNoOrId(ganeshPhoneNo, null);
-//
-//        userManagementService.updateUser("Ganesh Kedia", "ganesh.kedia@gmail.com",
-//                ganeshPhoneNo);
-//
-//        if(user2!=null) {
-//            userManagementService.getUserByPhoneNoOrId(null, user2.getUserId());
-//        }
+
+        String meghaPhoneNo = "1234567890";
+        String ganeshPhoneNo = "9087654321";
+
+        userManagementService.registerUser(ganeshPhoneNo, "ganeshsecretkey");
+        userManagementService.registerUser(meghaPhoneNo, "meghasecretkey");
+
+        userManagementService.updateUser("Megha Budhia", "megha.budhia@gmail.com",
+                meghaPhoneNo);
+
+        userManagementService.updateUser("Ganesh Kedia", "ganesh.kedia1234@gmail.com",
+                ganeshPhoneNo);
+
 
         User user1 = userManagementService.getUserByPhoneNoOrId(meghaPhoneNo, null);
         User user2 = userManagementService.getUserByPhoneNoOrId(ganeshPhoneNo, null);
@@ -40,7 +38,7 @@ public class Main {
 
         TransactionService transactionService = new TransactionService(transactionDao, paymentFactory);
         // User Enters Mobile no, transaction is created on this user;
-        Transaction transaction = new Transaction(user1, user2, 900.00);
+        Transaction transaction = new Transaction(user1, user2, 100.00);
         transactionService.createTransaction(transaction);
 
         PaymentMode paymentMode = PaymentMode.Paytm;

@@ -1,3 +1,7 @@
+create  database payments;
+
+use payments;
+
 CREATE TABLE `payment` (
   `payment_id` varchar(255) NOT NULL,
   `from_user` varchar(255) DEFAULT NULL,
@@ -22,7 +26,6 @@ CREATE TABLE `transaction` (
   `failure_reason` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`transaction_id`)
 ) ;
-
 
 CREATE TABLE `user` (
   `user_id` varchar(255) NOT NULL,
